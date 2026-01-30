@@ -41,6 +41,8 @@ class plgVMPaymentMolpay extends vmPSPlugin
 		$varsToPush = array(
 			'molpay_merchantid'	=> array('', 'char'),
 			'molpay_verifykey'	=> array('', 'char'),
+			'molpay_extended_vcode'	=> array('', 'char'),
+			'molpay_account_type'	=> array('', 'char'),
 			'status_pending'		=> array('', 'char'),
 			'status_success'		=> array('', 'char'),
 			'status_canceled'		=> array('', 'char'),
@@ -120,7 +122,17 @@ class plgVMPaymentMolpay extends vmPSPlugin
 		$country = $dbs->loadResult();
 		
 		//vcode
-		$vcode = md5($totalInPaymentCurrency . $method->molpay_merchantid . $order['details']['BT']->order_number . $method->molpay_verifykey);
+		if ($method->molpay_extended_vcode == "1") {
+			$vcode = md5($totalInPaymentCurrency . $method->molpay_merchantid . $order['details']['BT']->order_number . $method->molpay_verifykey . $currency_code_3);
+		} else {
+			$vcode = md5($totalInPaymentCurrency . $method->molpay_merchantid . $order['details']['BT']->order_number . $method->molpay_verifykey);
+		}
+
+		//account type
+		$account_type_url = "https://www.pay.fiuu.com";
+		if ($method->molpay_account_type == 'sandbox') {
+			$account_type_url = "https://sandbox-payment.fiuu.com";
+		} 
 		
 		//mart name
 		$martquery = 'SELECT `vendor_store_name` FROM `#__virtuemart_vendors_en_gb` WHERE `virtuemart_vendor_id`="' . $method->virtuemart_vendor_id . '" ';
@@ -152,7 +164,7 @@ class plgVMPaymentMolpay extends vmPSPlugin
 		$this->storePSPluginInternalData($dbValues);
 		
 		// add spin image
-		$html = '<form action="https://www.onlinepayment.com.my/MOLPay/pay/'.$method->molpay_merchantid.'/index.php" method="post" name="vm_molpay_form" >';
+		$html = '<form action="'.$account_type_url.'/MOLPay/pay/'.$method->molpay_merchantid.'/index.php" method="post" name="vm_molpay_form" >';
 		$html.= '<input type="image" name="submit" alt="Click to pay with Fiuu!" />';
 		foreach ($post_variables as $name => $value) 
 		{
