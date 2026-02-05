@@ -129,7 +129,7 @@ class plgVMPaymentMolpay extends vmPSPlugin
 		}
 
 		//account type
-		$account_type_url = "https://www.pay.fiuu.com";
+		$account_type_url = "https://pay.fiuu.com";
 		if ($method->molpay_account_type == 'sandbox') {
 			$account_type_url = "https://sandbox-payment.fiuu.com";
 		} 
