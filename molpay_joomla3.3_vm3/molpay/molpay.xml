@@ -22,7 +22,12 @@
 				<field type="vmtitle" default="VMPAYMENT_MOLPAY_LIVE_PARAMS" level="level1"/>
 				<field name="molpay_merchantid" type="text" size="50" default="" label="VMPAYMENT_MOLPAY_LOGIN_ID" description="VMPAYMENT_MOLPAY_LOGIN_ID_DESC"/>
 				<field name="molpay_verifykey" type="text" size="70" default="" label="VMPAYMENT_MOLPAY_TRANSACTION_KEY" description="VMPAYMENT_MOLPAY_TRANSACTION_KEY_DESC"/>
-
+				<field name="molpay_extended_vcode" type="checkbox" value="1" default="" label="VMPAYMENT_MOLPAY_EXTENDED_VCODE_KEY" description="VMPAYMENT_MOLPAY_EXTENDED_VCODE_KEY_DESC"/>
+				<field name="molpay_account_type" type="list" default="production" label="VMPAYMENT_MOLPAY_ACCOUNT_TYPE_KEY" description="VMPAYMENT_MOLPAY_ACCOUNT_TYPE_DESC">
+				  	<option value="production">Production</option>
+					<option value="sandbox">Sandbox</option>
+				</field>
+				
 				<!-- Note: Shopping cart transaction status mapping -->
 				<field type="vmtitle" default="VMPAYMENT_MOLPAY_ORDER_STATUS_PARAMS" level="level1"/>
 				<field name="status_success" type="vmorderstate" scope="com_virtuemart" default="C" 
