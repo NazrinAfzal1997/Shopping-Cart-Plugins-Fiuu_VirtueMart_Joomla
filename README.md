@@ -9,14 +9,14 @@ Fiuu Plugin for Joomla VirtueMart Shopping Cart developed by Fiuu R&D team.
 
 Supported version
 -----------------
-[Joomla 2.5.x and VirtueMart 2.6.x above](https://github.com/RazerMS/VirtueMart_Plugin/blob/master/distribution/molpay_joomla2.5_vm2.zip?raw=true)
+[Joomla 2.5.x and VirtueMart 2.6.x above](https://github.com/FiuuPayment/Shopping-Cart-Plugins-Fiuu_VirtueMart_Joomla/blob/master/distribution/molpay_joomla2.5_vm2.zip?raw=true)
 
-[Joomla 3.3.x and VirtueMart 3.x.x above](https://github.com/RazerMS/VirtueMart_Plugin/blob/master/distribution/molpay_joomla3.3_vm3.zip?raw=true)
+[Joomla 3.3.x and VirtueMart 3.x.x above](https://github.com/FiuuPayment/Shopping-Cart-Plugins-Fiuu_VirtueMart_Joomla/blob/master/distribution/molpay_joomla3.3_vm3.zip?raw=true)
 
 Notes
 -----
 
-MOLPay Sdn. Bhd. is not responsible for any problems that might arise from the use of this module. 
+Fiuu is not responsible for any problems that might arise from the use of this module. 
 Use at your own risk. Please backup any critical data before proceeding. For any query or 
 assistance, please email support-sa@fiuu.com 
 
@@ -24,7 +24,7 @@ assistance, please email support-sa@fiuu.com
 Installations
 -------------
 
-[Installation Guidance](https://github.com/RazerMS/VirtueMart_Plugin/wiki/Installation)
+[Installation Guidance](https://github.com/FiuuPayment/Shopping-Cart-Plugins-Fiuu_VirtueMart_Joomla/wiki/Installation)
 
 Contribution
 ------------
